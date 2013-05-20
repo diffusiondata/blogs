@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<logs>
+
+	<console-log-level>INFO</console-log-level>
+	<log-message-data>true</log-message-data>
+	<server-log>server</server-log>
+	<default-log-directory>/var/log/tomcat6/diffusion</default-log-directory>
+
+	<log name="server">
+		<log-directory>/var/log/tomcat6/diffusion</log-directory>
+		<file-pattern>%s.log</file-pattern>
+		<level>FINE</level>
+		<xml-format>false</xml-format>
+		<file-limit>52428800</file-limit>
+		<file-append>true</file-append>
+		<file-count>1</file-count>
+		<rotate-daily>false</rotate-daily>
+	</log>
+
+	<log name="stats">
+		<log-directory>/var/log/tomcat6/diffusion</log-directory>
+		<file-pattern>stats.%d.log</file-pattern>
+		<level>FINE</level>
+		<xml-format>false</xml-format>
+		<file-limit>1024m</file-limit>
+		<file-append>true</file-append>
+		<file-count>7</file-count>
+		<rotate-daily>true</rotate-daily>
+	</log>
+</logs>

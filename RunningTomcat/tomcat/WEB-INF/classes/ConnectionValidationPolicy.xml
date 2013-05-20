@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connection-validation-policies>
+	<!-- A policy definition. The type may be either whitelist or blacklist, 
+		to indicate whether this policy should allow or deny a connection based on 
+		the rules within it. Policies which are marked as automatic are applied by 
+		Diffusion, otherwise they can be applied programmatically in a publisher. -->
+	<policy name="development" type="whitelist" automatic="false">
+		<addresses>
+			<!-- An IP address (or regex) to match against a connecting client -->
+			<address>127.0.0.1</address>
+			<address>0:0:0:0:0:0:0:1%0</address>
+			<address>0:0:0:0:0:0:0:1</address>
+			<address>192.168.*</address>
+		</addresses>
+	</policy>
+	<policy name="embargoed" type="blacklist" automatic="false">
+		<locale>
+			<!-- The ISO country code of the connecting client, as returned by the 
+				WhoIs service. -->
+			<country>KP</country>
+		</locale>
+	</policy>
+	<policy name="unsupported" type="blacklist" automatic="false">
+		<locale>
+			<!-- The ISO language code of the connecting client, as returned by the 
+				WhoIs service. -->
+			<language>FR</language>
+		</locale>
+	</policy>
+</connection-validation-policies>

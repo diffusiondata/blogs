@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- Specifies if JMX is to be enabled, by setting this to false, will also 
+	disable the central time service -->
+<management enabled="true">
+
+	<!-- The management host (RMI registry host) -->
+	<host></host>
+	<!-- The RMI Registry port -->
+	<registry-port>1099</registry-port>
+	<!-- The connection port (for jconsole) -->
+	<connection-port>1100</connection-port>
+
+	<!-- Enable registration of Topics to the JMX server. If you want Topic 
+		level statistics via JMX then this should be set to true -->
+	<register-topics>false</register-topics>
+
+	<!-- List of users that will be able to use the JMX interface -->
+	<users>
+		<user>
+			<!-- User name for JMX credentials -->
+			<name>admin</name>
+			<!-- Password for JMX credentials -->
+			<password>OB:kDpSTOdlPF/U/Zug71Tmdw==</password>
+			<!-- Specify if user has read only access, if this value is false, then 
+				the user will have admin access -->
+			<read-only>false</read-only>
+		</user>
+		<user>
+			<name>guest</name>
+			<password>Guest</password>
+			<read-only>true</read-only>
+		</user>
+	</users>
+
+</management>

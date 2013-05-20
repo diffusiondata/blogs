@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<mail-servers>
+	<mail-server name="gmail" debug="false">
+		<!-- The host name or address of the SMTP server -->
+		<host>smtp.gmail.com</host>
+		<!-- The port number that the SMTP server listens on -->
+		<port>25</port>
+		<!-- The user name which must be specified if the SMTP server requires 
+			authentication - otherwise leave blank -->
+		<username>my.email.address@gmail.com</username>
+		<!-- The password for SMTP authentication, if required -->
+		<password>myPassword</password>
+		<!-- Specifies whether TLS is enabled for the SMTP server -->
+		<tls>false</tls>
+		<!-- Space delimited list of ssl protocols -->
+		<!-- <ssl-protocols></ssl-protocols> -->
+	</mail-server>
+</mail-servers>

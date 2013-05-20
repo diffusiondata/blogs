@@ -1,0 +1,4 @@
+#diffusion-widget-container{ width: 960px; margin: 0 0 0 -480px; position: fixed; bottom: 0; left: 50%; z-index: 9999;
+	border-bottom-left-radius: 0; border-bottom-right-radius: 0;
+	box-shadow: 0 0 40px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<publishers>
+
+	<!-- The Diffusion Publisher is required for the System Publisher and the 
+		Introspector -->
+	<publisher name="Diffusion">
+		<!-- A list of topic names specifying the Topics that are automatically 
+			to be registered to the Publisher as it starts -->
+		<topics>Diffusion</topics>
+		<!-- The full class name of a Java class that implements the Publisher. 
+			This class must extend the Java API Publisher class and provide implementations 
+			of methods as required. The class file must be available on the classpath 
+			of the Diffusion Server (or in the usr-lib or ext folder) -->
+		<class>com.pushtechnology.diffusion.publishers.diffusion.DiffusionPublisher
+		</class>
+		<!-- If enabled then the publisher will be loaded, if false, then is entry 
+			will be ignored -->
+		<enabled>true</enabled>
+		<!-- Once the publisher has been loaded, start the publisher -->
+		<start>true</start>
+		<!-- Specifies whether Topic Aliasing should be turned on for the Publisher. 
+			If true then a short Topic alias will be transmitted in delta Messages instead 
+			of the full Topic name -->
+		<topic-aliasing>true</topic-aliasing>
+
+		<!-- If the JMXAdapter is enabled, then JMX MBeans will be exposed as topics -->
+		<property name="JMXAdapter.enabled">true</property>
+
+		<!-- The refresh frequency -->
+		<property name="JMXAdapter.refreshFrequency">3000</property>
+	</publisher>
+
+    <publisher name="Dogfight">
+        <class>com.pushtechnology.diffusion.demos.publishers.dogfight.DogfightPublisher</class>
+        <start>true</start>
+    </publisher>
+</publishers>

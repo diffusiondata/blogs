@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!-- Specifies if statistics are enabled -->
+<statistics enabled="true">
+
+	<client-statistics enabled="true">
+		<!-- Definition of the log in Logs.xml -->
+		<log-name>stats</log-name>
+		<!-- Specifies the output frequency of the log, this is one entry per frequency -->
+		<output-frequency>1m</output-frequency>
+	</client-statistics>
+
+	<!-- Enable topic statistics -->
+        <topic-statistics enabled="true"/>
+
+	<!-- Enable server statistics -->
+        <server-statistics enabled="true"/>
+
+	<!-- Enable publisher statistics -->
+        <publisher-statistics enabled="true"/>
+
+</statistics>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<server>
+
+	<!-- The server name is used to identify this server if running in a cluster. 
+		This will also be used as a prefix for client IDs. If not specified the local 
+		host name will be used -->
+	<server-name></server-name>
+
+	<!-- The maximum message size in bytes. This defines the maximum message 
+		size (including headers) that can be handled -->
+	<max-message-size>32k</max-message-size>
+
+	<!-- Specifies the number of bytes utilised within Message headers to accommodate 
+		the Message length. This may have a value of 4, 2 or 1. This is a system 
+		wide setting which must match for all components of distributed Diffusion 
+		system. Client APIs etc will automatically adapt to the size at the Server 
+		they connect to. The size chose depends upon the maximum message size that 
+		needs to be catered for. A value of 1 will cater for Messages up to 127 bytes 
+		in length (including headers), 2 will cater for Messages up to 32,767 bytes 
+		in length and 4 can notionally cater for Messages up to 2,147,483,647. -->
+	<message-length-size>4</message-length-size>
+
+	<!-- The character set to use for Diffusion message character conversions 
+		see Java Encodings for full list -->
+	<charset>UTF-8</charset>
+
+	<!-- Multiplexer section -->
+	<multiplexers>
+		<!-- Specify the client multiplexer definition -->
+		<client>client</client>
+		<multiplexer-definition name="client">
+			<!-- This is the number of multiplexers that will start in readiness for 
+				clients to be assigned to. If there are going to be a large number of users, 
+				then this number should be increased -->
+			<size>4</size>
+			<!-- This is the thread priority for the multiplexers -->
+			<thread-priority>8</thread-priority>
+			<!-- This is the load balancer to use for client registration. There are 
+				currently two implemented load balancers, RoundRobin, which is fast, although 
+				can not guarantee fairness of the connections per multiplexer due to the 
+				randomness of disconnections. LeastClients will guarantee fairness across 
+				the multiplexers. -->
+			<load-balancer>RoundRobin</load-balancer>
+			<!-- Multiplexers are critical to the operation of Diffusion. If there 
+				are two many clients assigned to few multiplexers then there is a possibility 
+				of message latency. This is an optional flag which can be set to issue a 
+				warning if the multiplexer is taking to long in its operational cycle. Setting 
+				the value to zero will turn off this feature -->
+			<latency-warning>1s</latency-warning>
+		</multiplexer-definition>
+	</multiplexers>
+
+	<security>
+		<!-- This is the full name of a class, on the class path, which implements 
+			the AuthorisationHandler interface in the Java Publisher API. -->
+		<authorisation-handler-class></authorisation-handler-class>
+	</security>
+
+	<!-- Client Queues section -->
+	<client-queues>
+		<!-- The default queue definition -->
+		<default-queue-definition>default</default-queue-definition>
+		<!-- This is the default Topic Message Comparator class to use if queue 
+			conflation is turned on. If this is not specified then conflation will only 
+			occur for Topics that have comparators explicitly set from within Publishers -->
+		<!-- <default-topic-message-comparator-class></default-topic-message-comparator-class> -->
+		<queue-definition name="default">
+			<!-- The maximum depth of the queue -->
+			<max-depth>1000</max-depth>
+			<!-- True if the queue conflates -->
+			<conflates>false</conflates>
+			<!-- When the upper percentage of the queue reached, the publishers that 
+				the client is subscribed to will be notified -->
+			<!-- <upper-threshold></upper-threshold> -->
+			<!-- When the lower percentage of the queue reached, the publishers that 
+				the client is subscribed to will be notified -->
+			<!-- <lower-threshold></lower-threshold> -->
+			<!-- If a message exceeds the output buffer size, setting this option will
+			     allow the message to be fragmented. This should be used as a last resort,
+			     consider setting fragmentation when creating messages in your publisher instead. -->
+			<!-- <auto-fragment></auto-fragment> -->
+		</queue-definition>
+		<queue-definition name="largeQueue">		
+			<max-depth>100000</max-depth>
+		</queue-definition>
+	</client-queues>
+
+	<connection-timeouts>
+		<!-- If the server cannot write data to the client within this time, 
+		specified in millis, the client will be closed -->
+		<write-timeout>3s</write-timeout>
+		<!-- This is the time in milliseconds which specifies how long the server
+		will wait from when the socket is opened and the handshake between server and client is complete -->
+		<connection-timeout>5s</connection-timeout>
+	</connection-timeouts>
+	
+	<date-formats>
+		<!-- The format used when displaying dates -->
+		<date>yyyy-MM-dd</date>
+		<!-- The format used when displaying times -->
+		<time>HH:mm:ss</time>
+		<!-- The format used when displaying date and time -->
+		<date-time>yyyy-MM-dd HH:mm:ss</date-time>
+		<!-- The format used when displaying a timestamp, for example in a log, 
+			to millisecond precision -->
+		<timestamp>yyyy-MM-dd HH:mm:ss.SSS</timestamp>
+	</date-formats>
+
+	<thread-pools>
+		<!-- Name of the inbound thread pool definition -->
+		<inbound>InboundThreadPool</inbound>
+		<!-- Name of the outbound thread pool definition -->
+		<outbound>OutboundThreadPool</outbound>
+		<!-- Number of threads to use for the background thread pool -->
+		<background-thread-size>2</background-thread-size>
+		<!-- The number of temporary outbound selectors: deprecated -->
+		<writer-selectors>10</writer-selectors>
+		<!-- Thread pool definition -->
+		<thread-pool-definition name="InboundThreadPool">
+			<!-- The core number of threads to have running in the inbound thread 
+				pool. Whenever a thread is required a new one will be created until this 
+				number is reached, even if there are idle threads already in the pool -->
+			<core-size>3</core-size>
+			<!-- The maximum number of threads that may be created in the inbound 
+				thread pool before tasks are queued. Such threads are released immediately 
+				after execution -->
+			<max-size>10</max-size>
+			<!-- The inbound queue size. When the max-size is reached then tasks will 
+				be queued. If the value is zero then the queue is unbounded. If not 0 then 
+				the value must be at least 10 -->
+			<queue-size>2000</queue-size>
+			<!-- The time to keep the threads alive for, if idle -->
+			<keep-alive>0</keep-alive>
+			<!-- This is the priority of the threads -->
+			<priority>8</priority>
+			<!-- >The name of a class implementing the ThreadPoolNotificationHandler 
+				interface which will be instantiated to handle notifications on the thread 
+				pool -->
+			<!-- <thread-pool-listener></thread-pool-listener> -->
+			<!-- The name of a class implementing the ThreadPoolNotificationHandler 
+				interface which will be instantiated to handle notifications on the thread 
+				pool -->
+			<!-- <rejection-handler-class></rejection-handler-class> -->
+		</thread-pool-definition>
+		<!-- Outbound thread pool definition: deprecated -->
+		<thread-pool-definition name="OutboundThreadPool">
+			<core-size>1</core-size>
+			<max-size>10</max-size>
+			<queue-size>10</queue-size>
+			<keep-alive>0</keep-alive>
+			<priority>6</priority>
+		</thread-pool-definition>
+	</thread-pools>
+
+	<!-- Whois section -->
+	<whois>
+		<!-- Name of the WhoIs provider class that must be on the classpath and 
+			must implement the API class WhoIsProvider -->
+		<provider>com.pushtechnology.diffusion.api.whois.WhoIsDefaultProvider
+		</provider>
+		<!-- The number of background threads that will process WhoIs resolver 
+			requests -->
+		<threads>2</threads>
+		<!-- The host name of a WhoIs provider which adheres to the RFC3912 WhoIs 
+			protocol -->
+		<host>whois.ripe.net</host>
+		<!-- The port number that the WhoIs provider listens on (normally 43) -->
+		<port>43</port>
+		<whois-cache>
+			<!-- The maximum size of the WhoIs cache. When the cache size exceeds 
+				this number it will be tidied. A value of 0 means the cache will grow indefinitely 
+				unless entries are removed because they have exceeded their retention time -->
+			<maximum>1000</maximum>
+			<!-- The time for which WhoIs cache entries are retained before being 
+				deleted. A value of 0 means entries are retained indefinitely or until the 
+				cache reaches its maximum size -->
+			<retention>0</retention>
+			<!-- The interval at which the Whois cache tidier task will check if any 
+				cache entries have passed their retention time or if the cache has exceeded 
+				its maximum size. This is ignored if both maximum and retention are 0 -->
+			<tidy-interval>1h</tidy-interval>
+		</whois-cache>
+	</whois>
+
+	<!--
+		 If you want to enable publisher hot deployment by dropping a DAR file into
+	     a directory, you can configure this feature here.
+	     The directory is the name of the directory where DAR files will be found.
+	     The scan frequency is how often to check for new, updated or deleted DAR files.  
+	-->
+	<auto-deployment>
+		<directory>../deploy</directory>
+		<scan-frequency>10s</scan-frequency>
+	</auto-deployment>
+
+	<!-- Enable the MaxMind GeoIP database -->
+	<geo-ip enabled="true">
+		<file-name>../data/GeoLiteCity.dat</file-name>
+	</geo-ip>
+	
+	<!-- This can optionally specify a list of directories to load classes from. 
+		When the server starts, this folder is traversed, including sub directories 
+		and all jars or zip files added to the class loader -->
+	<!-- <usr-lib> <directory>/opt/something</directory> </usr-lib> -->
+</server>

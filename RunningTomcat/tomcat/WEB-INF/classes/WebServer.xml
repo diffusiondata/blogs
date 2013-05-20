@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<web-servers>
+        <web-server name="default">
+		<client-service name="client" debug="true">
+			<message-sequence-timeout>4s</message-sequence-timeout>
+			<websocket-origin>.*</websocket-origin>
+			<cors-origin>.*</cors-origin>
+			<close-callback-requests>false</close-callback-requests>
+			<compression-threshold>256</compression-threshold>
+		</client-service>
+	</web-server>
+</web-servers>

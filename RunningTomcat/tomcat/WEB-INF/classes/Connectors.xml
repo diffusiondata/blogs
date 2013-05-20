@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<connectors>
+	<connector name="Clients">
+		<type>client</type>
+		<port>8081</port>
+		<acceptors>1</acceptors>
+		<backlog>3000</backlog>
+		<socket-conditioning>
+			<input-buffer-size>4k</input-buffer-size>
+			<output-buffer-size>64k</output-buffer-size>
+			<keep-alive>true</keep-alive>
+			<no-delay>true</no-delay>
+			<reuse-address>true</reuse-address>
+		</socket-conditioning>
+		<web-server>default</web-server>
+		<system-ping-frequency>90s</system-ping-frequency>
+	</connector>
+    <connector name="Policy">
+        <type>policy</type>
+        <port>8843</port>
+        <acceptors>1</acceptors>
+        <socket-conditioning>
+            <input-buffer-size>4k</input-buffer-size>
+            <output-buffer-size>4k</output-buffer-size>
+        </socket-conditioning>
+        <policy-file>/var/lib/tomcat6/webapps/tomcat/WEB-INF/classes/FlashPolicy.xml</policy-file>
+    </connector>
+</connectors>

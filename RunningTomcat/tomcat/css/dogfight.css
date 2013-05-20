@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.join_dialog {
+	width: 640px;
+	height: 200px;
+	margin: 0 0 0 -320px;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.player_name {
+	text-align: center;
+	position: relative;
+	top: 60px;
+}
+
+.join_dialog, .arena {
+	font-family: 'Army', sans-serif;
+	font-size: 28px;
+}
+
+.arena {
+	
+}

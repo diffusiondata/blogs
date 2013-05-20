@@ -1,0 +1,162 @@
+@font-face {font-family: 'Museo-700';src: url('/lib/fonts/1C324E_0_0.eot');src: url('/lib/fonts/1C324E_0_0.eot?#iefix') format('embedded-opentype'),url('/lib/fonts/1C324E_0_0.woff') format('woff'),url('/lib/fonts/1C324E_0_0.ttf') format('truetype');}
+@font-face {font-family: 'Museo-300';src: url('/lib/fonts/1C324E_1_0.eot');src: url('/lib/fonts/1C324E_1_0.eot?#iefix') format('embedded-opentype'),url('/lib/fonts/1C324E_1_0.woff') format('woff'),url('/lib/fonts/1C324E_1_0.ttf') format('truetype');}
+@font-face {font-family: 'Museo';src: url('/lib/fonts/1C324E_2_0.eot');src: url('/lib/fonts/1C324E_2_0.eot?#iefix') format('embedded-opentype'),url('/lib/fonts/1C324E_2_0.woff') format('woff'),url('/lib/fonts/1C324E_2_0.ttf') format('truetype');}
+
+/* -----------------------------------------
+   Core Element Styles
+----------------------------------------- */
+html { background: #5d5c5c; }
+body { background: #fff; color: #505050; cursor: default; overflow-y: scroll; }
+
+p { margin: 0 0 15px; }
+a { text-decoration: none; }
+a:hover { cursor: pointer; }
+
+h1, h2, h3, em, blockquote { margin: 0 0 8px; color: #333; }
+h2 { margin: 0 0 14px; }
+
+a, a:visited { color: #0363a9;  }
+h2 a, h3 a, h4 a, strong a { color: #333; }
+
+iframe { width: 100%; background: #fff; }
+
+/* --------- Override Bootstrap styles ---------
+---------------------------------------- */
+.navbar .navbar-inner { border-bottom: 1px solid #ddd; }
+.navbar .nav a { font-family: "Museo"; }
+.navbar .nav .active a, .navbar .nav .active a:hover { color: #007dd7; background: none; box-shadow: none; }
+
+.nav-tabs { margin-bottom: 0px; }
+.nav-tabs .active a { border-bottom: 1px solid #fff; }
+.tab-pane { padding: 5px; background: #fff; border: 1px solid #ddd; border-top: none; }
+
+.tabs-right .nav-tabs { margin-bottom: 5px; margin-left: 0; border: none; }
+.tabs-right .nav-tabs a { border-left: 0; }
+.tabs-right .nav-tabs .active a { border-left: 1px solid #fff; }
+.tabs-right .tab-pane { border: 1px solid #ddd; }
+
+.table tr td { vertical-align: middle; }
+.table-grid, .table-grid td { vertical-align: text-top; }
+
+.form-inline .input-prepend + .input-prepend { margin-left: 10px; }
+
+.btn { margin: 0 4px 0 0; }
+.btn-group .btn { margin: 0; }
+
+/* -----------------------------------------
+   Font styles
+----------------------------------------- */
+body, textarea { font-size: 16px; font-family: Arial, sans-serif; }
+h2, blockquote { font-family: "Museo", serif; }
+
+h1 { font-size: 1.875em; line-height: 1.05em; font-family: "Museo-700"; }
+h2 { font-size: 1.55em; line-height: 1.3em; font-weight: normal; }
+p { font-size: 0.95em; line-height: 1.275em; }
+
+.page-title { letter-spacing: 0.04em; }
+.page-tagline { font-size: 22px; line-height: 1.3em; font-family: "Museo-300"; }
+.page-footer p { font-size: 0.8em; margin-bottom: 5px; }
+
+.content-body h1 { font-size: 1.4em; line-height: 1.5em; margin-bottom: 0.5em; }
+.content-body h2 { font-size: 1.25em; line-height: 1.375em; }
+.content-body ul strong { font-size: 1em; color: #222; }
+.content-body .emphasised { font-size: 1.35em; }
+
+.button, a.button { font-family: "Museo-700"; font-size: 1.1em; font-weight: 500; color: #fff; margin: 0 8px 6px 0; }
+
+.small, .small label, .small input { font-size: 85%; }
+.small input { height: 13px; line-height: 13px; }
+
+/* -----------------------------------------
+	Shared classes
+----------------------------------------- */
+.button { padding-top: 0.45em; padding-bottom: 0.5em; margin-top: 10px; border:none; border-radius: 4px; cursor: pointer; text-align: center; display: block; float: left; color: #fff; }
+.button:hover { text-shadow: 0 1px 1px #000; text-decoration: none; }
+.button.auto, .auto { padding-right: 0.65em; padding-left: 0.65em; margin: 3px 0 2px; }
+
+.rounded { border-radius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; -o-border-radius: 8px; -ms-border-radius: 8px; }
+.rounded-small { border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px; -o-border-radius: 4px; -ms-border-radius: 4px; }
+
+.center { margin-left: auto; margin-right: auto; float: none; }
+
+.left-aligned { text-align: left; }
+.right-aligned { text-align: right; }
+.center-aligned { text-align: center; }
+
+.emphasised { background: none; }
+.emphasised:hover { text-shadow: 0 1px 1px #000; }
+
+.distinguished  { padding: 9px 7px; background: #fff; border: 1px solid #ddd; }
+.distinguished .table tr:first-child td { border-top: 0; }
+
+.scrollable { overflow-y: scroll; height: 250px; }
+
+/* --------- Colours  ---------- 
+------------------------------------- */
+.primary .header { color: #4891dc; }
+.primary .button, .primary.button, .call-to-action, .button { background: #4891dc; }
+.primary .button:hover, .primary.button:hover, .button:hover { background: #1561ae; }
+
+.secondary .header { color: #507282; }
+.secondary .button, .secondary.button { background: #507282; }
+.secondary .button:hover, .secondary.button:hover { background: #306372; }
+
+.yellow .header { color: #caad68; }
+.yellow .button, .yellow.button { background: #caad68; }
+.yellow .button:hover, .yellow.button:hover { background: #cea43f; }
+
+.purple .header { color: #70535c; }
+.purple .button, .purple.button { background: #70535c; }
+.purple .button:hover, .purple.button:hover { background: #5f3441; }
+
+.orange .header { color: #b35639; }
+.orange .button, .orange.button { background: #b35639; }
+.orange .button:hover, .orange.button:hover { background: #9C3616; }
+
+.highlighted .header { color: #ee4534; }
+.highlighted .button, .highlighted.button { background: #ee4534; }
+.highlighted .button:hover, .highlighted.button:hover { background: #ae251b; }
+
+.important { color: #b35639; }
+.important .button, .important.button { color: #fff; background: #b35639; }
+
+
+/* --------- Block group styles ---------- 
+--------------------------------------- */
+.page-container { min-height: 100%; height: auto !important; height: 100%; margin-bottom: -165px; z-index: 0; position: relative; z-index: 5; }
+.page-header { position: relative; }
+
+.page-footer { height: 100px; padding: 22px 0 40px; background: #5d5c5c; border-top: 3px solid #333; color:#dddcdc; font-size:0.9em; z-index: 5;}
+.page-footer a { color: #ddddcc; }
+.page-footer a:hover { text-decoration: underline; }
+.page-footer p { margin: 0; }
+
+.page-footer .small { margin: 3px 0 15px; color: #cccccc; font-size: 11px; clear: both; }
+.page-footer .divider { padding: 0 3px; }
+.page-footer-placeholder { height: 165px; clear:both; }
+
+.page { padding: 60px 0 0 0; text-align: left; }
+.page-title { margin: 0 0 15px; }
+.page-tagline { color: #505050; }
+
+/* --------- Content element styles ---------- 
+------------------------------------- */
+.content-center { width: 904px; margin-left: auto; margin-right: auto; position: relative; }
+.content-footer { margin: 14px 0 30px; padding: 20px 20px 8px; background: #333; color: #fafafa; }
+
+.content-body { padding: 20px; margin: 38px 0 20px; background: #eae9e2 url('/lib/img/structure/seperate-bg.png'); z-index: 10; }
+.content-body h2 { padding: 0 0 8px; background: url('/lib/img/structure/header-bg.png') repeat-x bottom left; }
+.content-body dt { width: 240px; float: left; margin-right: 20px; color: #333; }
+.content-body dd { width: 200px; float: left; margin-bottom: 20px; }
+.content-body dd .button { margin-top: 0; }
+.content-body .divider { height: 8px;  margin:26px 14px; border: none;background: url('/lib/img/structure/header-bg.png') repeat-x bottom left; display: block; }
+.content-body .table-list td { border-color: #70535c; }
+
+
+.content-row { min-height: 120px; padding: 0; margin-bottom: 0; position: relative; border-top: 1px solid #919191;  bottom: 0; }
+.content-row:after { height: 8px; width: 100%; background: url('/lib/img/structure/seperate-shadow.png') repeat-x top left; display: block; position: absolute; top: 0; content: ""; }
+.content-row:before { height: 1px; margin: -2px 0 0; border-top: 1px solid #fff; display: block; content: ""; }
+.content-row .content-body { margin-top: 20px; }
+.content-row + .content-row { margin-top: 0; padding-top: 20px; background: #fff; }
+.content-row + .content-row:after { background: none; }
+

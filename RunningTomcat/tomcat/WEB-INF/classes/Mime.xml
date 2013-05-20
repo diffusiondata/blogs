@@ -1,0 +1,203 @@
+<mimes>
+	<mime type="application/postscript" extension="ai" />
+	<mime type="audio/x-aiff" extension="aif" />
+	<mime type="audio/x-aiff" extension="aifc" />
+	<mime type="audio/x-aiff" extension="aiff" />
+	<mime type="application/vnd.android.package-archive" extension="apk" />
+	<mime type="text/plain" extension="asc" />
+	<mime type="video/x.ms.asf" extension="asf" />
+	<mime type="video/x.ms.asx" extension="asx" />
+	<mime type="audio/basic" extension="au" />
+	<mime type="video/x-msvideo" extension="avi" />
+	<mime type="application/x-bcpio" extension="bcpio" />
+	<mime type="application/octet-stream" extension="bin" />
+	<mime type="application/x-cabinet" extension="cab" />
+	<mime type="application/x-netcdf" extension="cdf" />
+	<mime type="application/java-vm" extension="class" />
+	<mime type="application/vnd.rim.cod" extension="cod" />
+	<mime type="application/x-cpio" extension="cpio" />
+	<mime type="application/mac-compactpro" extension="cpt" />
+	<mime type="application/x-x509-ca-cert" extension="crt" />
+	<mime type="application/x-csh" extension="csh" />
+	<mime type="text/css" extension="css" />
+	<mime type="text/comma-separated-values" extension="csv" />
+	<mime type="application/x-director" extension="dcr" />
+	<mime type="text/html" extension="dhtml" />
+	<mime type="application/x-director" extension="dir" />
+	<mime type="application/x-msdownload" extension="dll" />
+	<mime type="application/octet-stream" extension="dms" />
+	<mime type="application/msword" extension="doc" />
+	<mime type="application/xml-dtd" extension="dtd" />
+	<mime type="application/x-dvi" extension="dvi" />
+	<mime type="application/x-director" extension="dxr" />
+	<mime type="application/postscript" extension="eps" />
+	<mime type="text/x-setext" extension="etx" />
+	<mime type="application/octet-stream" extension="exe" />
+	<mime type="application/andrew-inset" extension="ez" />
+	<mime type="image/gif" extension="gif" />
+	<mime type="application/x-gtar" extension="gtar" />
+	<mime type="application/gzip" extension="gz" />
+	<mime type="application/gzip" extension="gzip" />
+	<mime type="application/x-hdf" extension="hdf" />
+	<mime type="application/mac-binhex40" extension="hqx" />
+	<mime type="text/x-component" extension="htc" />
+	<mime type="text/html" extension="html" />
+	<mime type="text/html" extension="htm" />
+	<mime type="x-conference/x-cooltalk" extension="ice" />
+	<mime type="image/x-icon" extension="ico" />
+	<mime type="image/ief" extension="ief" />
+	<mime type="model/iges" extension="iges" />
+	<mime type="model/iges" extension="igs" />
+	<mime type="text/vnd.sun.j2me.app-descriptor" extension="jad" />
+	<mime type="application/java-archive" extension="jar" />
+	<mime type="text/plain" extension="java" />
+	<mime type="application/x-java-jnlp-file" extension="jnlp" />
+	<mime type="image/jpeg" extension="jpeg" />
+	<mime type="image/jpeg" extension="jpe" />
+	<mime type="image/jpeg" extension="jpg" />
+	<mime type="application/x-javascript" extension="js" />
+	<mime type="text/plain" extension="jsp" />
+	<mime type="audio/midi" extension="kar" />
+	<mime type="application/x-latex" extension="latex" />
+	<mime type="application/octet-stream" extension="lha" />
+	<mime type="application/octet-stream" extension="lzh" />
+	<mime type="audio/x-mpegurl" extension="m3u" />
+	<mime type="audio/mp4a-latm" extension="m4a" />
+	<mime type="audio/mp4a-latm" extension="m4b" />
+	<mime type="audio/mp4a-latm" extension="m4p" />
+	<mime type="video/vnd.mpegurl" extension="m4u" />
+	<mime type="video/x-m4v" extension="m4v" />
+	<mime type="application/x-troff-man" extension="man" />
+	<mime type="application/mathml+xml" extension="mathml" />
+	<mime type="application/x-troff-me" extension="me" />
+	<mime type="model/mesh" extension="mesh" />
+	<mime type="audio/midi" extension="mid" />
+	<mime type="audio/midi" extension="midi" />
+	<mime type="application/vnd.mif" extension="mif" />
+	<mime type="chemical/x-mdl-molfile" extension="mol" />
+	<mime type="video/x-sgi-movie" extension="movie" />
+	<mime type="video/quicktime" extension="mov" />
+	<mime type="audio/mpeg" extension="mp2" />
+	<mime type="audio/mpeg" extension="mp3" />
+	<mime type="video/mp4" extension="mp4" />
+	<mime type="video/mpeg" extension="mpeg" />
+	<mime type="video/mpeg" extension="mpe" />
+	<mime type="audio/mpeg" extension="mpga" />
+	<mime type="video/mpeg" extension="mpg" />
+	<mime type="application/x-troff-ms" extension="ms" />
+	<mime type="model/mesh" extension="msh" />
+	<mime type="application/octet-stream" extension="msi" />
+	<mime type="application/x-netcdf" extension="nc" />
+	<mime type="application/oda" extension="oda" />
+	<mime type="application/vnd.oasis.opendocument.database"
+		extension="odb" />
+	<mime type="application/vnd.oasis.opendocument.chart" extension="odc" />
+	<mime type="application/vnd.oasis.opendocument.formula" extension="odf" />
+	<mime type="application/vnd.oasis.opendocument.graphics"
+		extension="odg" />
+	<mime type="application/vnd.oasis.opendocument.image" extension="odi" />
+	<mime type="application/vnd.oasis.opendocument.text-master"
+		extension="odm" />
+	<mime type="application/vnd.oasis.opendocument.presentation"
+		extension="odp" />
+	<mime type="application/vnd.oasis.opendocument.spreadsheet"
+		extension="ods" />
+	<mime type="application/vnd.oasis.opendocument.text" extension="odt" />
+	<mime type="application/ogg" extension="ogg" />
+	<mime type="video/ogg" extension="ogv" />
+	<mime type="application/vnd.oasis.opendocument.chart-template"
+		extension="otc" />
+	<mime type="application/vnd.oasis.opendocument.graphics-template"
+		extension="otg" />
+	<mime type="application/vnd.oasis.opendocument.text-web"
+		extension="oth" />
+	<mime type="application/vnd.oasis.opendocument.image-template"
+		extension="oti" />
+	<mime type="application/vnd.oasis.opendocument.presentation-template"
+		extension="otp" />
+	<mime type="application/vnd.oasis.opendocument.spreadsheet-template"
+		extension="ots" />
+	<mime type="application/vnd.oasis.opendocument.text-template"
+		extension="ott" />
+	<mime type="image/x-portable-bitmap" extension="pbm" />
+	<mime type="chemical/x-pdb" extension="pdb" />
+	<mime type="application/pdf" extension="pdf" />
+	<mime type="image/x-portable-graymap" extension="pgm" />
+	<mime type="application/x-chess-pgn" extension="pgn" />
+	<mime type="image/png" extension="png" />
+	<mime type="image/x-portable-anymap" extension="pnm" />
+	<mime type="image/x-portable-pixmap" extension="ppm" />
+	<mime type="application/vnd.ms-powerpoint" extension="pps" />
+	<mime type="application/vnd.ms-powerpoint" extension="ppt" />
+	<mime type="application/postscript" extension="ps" />
+	<mime type="video/quicktime" extension="qt" />
+	<mime type="audio/x-realaudio" extension="ra" />
+	<mime type="audio/x-pn-realaudio" extension="ram" />
+	<mime type="image/x-cmu-raster" extension="ras" />
+	<mime type="application/rdf+xml" extension="rdf" />
+	<mime type="image/x-rgb" extension="rgb" />
+	<mime type="audio/x-pn-realaudio" extension="rm" />
+	<mime type="application/x-troff" extension="roff" />
+	<mime type="audio/x-pn-realaudio" extension="rpm" />
+	<mime type="application/rtf" extension="rtf" />
+	<mime type="text/richtext" extension="rtx" />
+	<mime type="application/java-serialized-object" extension="ser" />
+	<mime type="text/sgml" extension="sgml" />
+	<mime type="text/sgml" extension="sgm" />
+	<mime type="application/x-sh" extension="sh" />
+	<mime type="application/x-shar" extension="shar" />
+	<mime type="model/mesh" extension="silo" />
+	<mime type="application/x-stuffit" extension="sit" />
+	<mime type="application/x-koan" extension="skd" />
+	<mime type="application/x-koan" extension="skm" />
+	<mime type="application/x-koan" extension="skp" />
+	<mime type="application/x-koan" extension="skt" />
+	<mime type="application/smil" extension="smi" />
+	<mime type="application/smil" extension="smil" />
+	<mime type="audio/basic" extension="snd" />
+	<mime type="application/x-futuresplash" extension="spl" />
+	<mime type="application/x-wais-source" extension="src" />
+	<mime type="application/x-sv4cpio" extension="sv4cpio" />
+	<mime type="application/x-sv4crc" extension="sv4crc" />
+	<mime type="image/svg+xml" extension="svg" />
+	<mime type="application/x-shockwave-flash" extension="swf" />
+	<mime type="application/x-troff" extension="t" />
+	<mime type="application/x-tar" extension="tar" />
+	<mime type="application/x-gtar" extension="tar.gz" />
+	<mime type="application/x-tcl" extension="tcl" />
+	<mime type="application/x-tex" extension="tex" />
+	<mime type="application/x-texinfo" extension="texi" />
+	<mime type="application/x-texinfo" extension="texinfo" />
+	<mime type="application/x-gtar" extension="tgz" />
+	<mime type="image/tiff" extension="tiff" />
+	<mime type="image/tiff" extension="tif" />
+	<mime type="application/x-troff" extension="tr" />
+	<mime type="text/tab-separated-values" extension="tsv" />
+	<mime type="text/plain" extension="txt" />
+	<mime type="application/x-ustar" extension="ustar" />
+	<mime type="application/x-cdlink" extension="vcd" />
+	<mime type="model/vrml" extension="vrml" />
+	<mime type="application/voicexml+xml" extension="vxml" />
+	<mime type="audio/x-wav" extension="wav" />
+	<mime type="image/vnd.wap.wbmp" extension="wbmp" />	<mime type="video/webm" extension="webm" />	<mime type="video/webm" extension="webmv" />
+	<mime type="application/vnd.wap.wmlc" extension="wmlc" />
+	<mime type="application/vnd.wap.wmlscriptc" extension="wmlsc" />
+	<mime type="text/vnd.wap.wmlscript" extension="wmls" />
+	<mime type="text/vnd.wap.wml" extension="wml" />
+	<mime type="model/vrml" extension="wrl" />
+	<mime type="application/vnd.wap.wtls-ca-certificate" extension="wtls-ca-certificate" />
+	<mime type="application/x-silverlight" extension="xap" />
+	<mime type="image/x-xbitmap" extension="xbm" />
+	<mime type="application/xhtml+xml" extension="xht" />
+	<mime type="application/xhtml+xml" extension="xhtml" />
+	<mime type="application/vnd.ms-excel" extension="xls" />
+	<mime type="application/xml" extension="xml" />
+	<mime type="image/x-xpixmap" extension="xpm" />
+	<mime type="application/xml" extension="xsl" />
+	<mime type="application/xslt+xml" extension="xslt" />
+	<mime type="application/vnd.mozilla.xul+xml" extension="xul" />
+	<mime type="image/x-xwindowdump" extension="xwd" />
+	<mime type="chemical/x-xyz" extension="xyz" />
+	<mime type="application/compress" extension="z" />
+	<mime type="application/zip" extension="zip" />		<mime type="font/ttf" extension="ttf" />		<mime type="font/otf" extension="otf" />		<mime type="application/x-font-woff" extension="woff" />		<mime type="application/vnd.ms-fontobject" extension="eot" />
+</mimes>
