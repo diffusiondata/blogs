@@ -15,14 +15,14 @@
 		<web-server>default</web-server>
 		<system-ping-frequency>90s</system-ping-frequency>
 	</connector>
-    <connector name="Policy">
-        <type>policy</type>
-        <port>8843</port>
-        <acceptors>1</acceptors>
-        <socket-conditioning>
-            <input-buffer-size>4k</input-buffer-size>
-            <output-buffer-size>4k</output-buffer-size>
-        </socket-conditioning>
-        <policy-file>/var/lib/tomcat6/webapps/tomcat/WEB-INF/classes/FlashPolicy.xml</policy-file>
-    </connector>
+	<connector name="Policy">
+		<type>policy</type>
+		<port>8843</port>
+		<acceptors>1</acceptors>
+		<socket-conditioning>
+			<input-buffer-size>4k</input-buffer-size>
+			<output-buffer-size>4k</output-buffer-size>
+		</socket-conditioning>
+		<policy-file>/var/lib/tomcat6/webapps/tomcat/WEB-INF/classes/FlashPolicy.xml</policy-file>
+	</connector>
 </connectors>

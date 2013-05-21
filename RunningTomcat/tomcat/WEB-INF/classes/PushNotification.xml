@@ -8,9 +8,9 @@
 		</APNS-definition>
 	</APNS>
 	<C2DM>
-        <C2DM-definition name="myC2DMdefinition">
-            <email>foo@bar.com</email>
-            <password>OB:2ARAoOcSPTjHkxtI2v4ZEeJpO2ywYS0IpCx+sA==</password>
-        </C2DM-definition>
-    </C2DM>
+		<C2DM-definition name="myC2DMdefinition">
+			<email>foo@bar.com</email>
+			<password>OB:2ARAoOcSPTjHkxtI2v4ZEeJpO2ywYS0IpCx+sA==</password>
+		</C2DM-definition>
+	</C2DM>
 </push-notification>

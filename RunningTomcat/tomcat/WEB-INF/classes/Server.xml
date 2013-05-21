@@ -184,9 +184,9 @@
 
 	<!--
 		 If you want to enable publisher hot deployment by dropping a DAR file into
-	     a directory, you can configure this feature here.
-	     The directory is the name of the directory where DAR files will be found.
-	     The scan frequency is how often to check for new, updated or deleted DAR files.  
+		a directory, you can configure this feature here.
+		The directory is the name of the directory where DAR files will be found.
+		The scan frequency is how often to check for new, updated or deleted DAR files.  
 	-->
 	<auto-deployment>
 		<directory>../deploy</directory>

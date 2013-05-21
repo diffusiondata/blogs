@@ -30,8 +30,8 @@
 		<property name="JMXAdapter.refreshFrequency">3000</property>
 	</publisher>
 
-    <publisher name="Dogfight">
-        <class>com.pushtechnology.diffusion.demos.publishers.dogfight.DogfightPublisher</class>
-        <start>true</start>
-    </publisher>
+	<publisher name="Dogfight">
+		<class>com.pushtechnology.diffusion.demos.publishers.dogfight.DogfightPublisher</class>
+		<start>true</start>
+	</publisher>
 </publishers>

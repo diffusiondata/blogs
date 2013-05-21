@@ -1,13 +1,13 @@
 Running within Tomcat
 =====================
 
-Example of how to run Diffusion within tomcat. This is focused on how to
+Example of how to run Diffusion within Tomcat. This is focused on how to
 configure and setup a web application that runs Diffusion. The code is already
-compiled, the source code for the publisher is availabe in the examples
+compiled, the source code for the publisher is available in the examples
 directory of a Diffusion installation. Libraries are included in the relevant
 places and do not need to be resolved.
 
-The tomcat directory contains the web application.  
+The Tomcat directory contains the web application.  
 The server.xml file is an example Tomcat configuration.
 
 Included third party libraries:

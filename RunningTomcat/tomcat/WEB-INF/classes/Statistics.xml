@@ -10,12 +10,12 @@
 	</client-statistics>
 
 	<!-- Enable topic statistics -->
-        <topic-statistics enabled="true"/>
+	<topic-statistics enabled="true"/>
 
 	<!-- Enable server statistics -->
-        <server-statistics enabled="true"/>
+	<server-statistics enabled="true"/>
 
 	<!-- Enable publisher statistics -->
-        <publisher-statistics enabled="true"/>
+	<publisher-statistics enabled="true"/>
 
 </statistics>
