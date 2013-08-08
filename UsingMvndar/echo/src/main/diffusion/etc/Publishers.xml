@@ -1,0 +1,6 @@
+<publishers>
+ <publisher name="EchoServer">
+   <class>com.pushtechnology.diffusion.demos.publishers.echo.EchoServer</class>
+   <start>true</start>
+ </publisher>
+</publishers>
