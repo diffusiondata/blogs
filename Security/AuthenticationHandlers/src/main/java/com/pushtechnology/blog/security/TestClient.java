@@ -18,7 +18,7 @@ public class TestClient {
         }
         catch (ArrayIndexOutOfBoundsException e) {
             System.err.printf(
-                "Usage: java com.pushtechnology.blog.security url principal password%n");
+                "Usage: java com.pushtechnology.blog.security.TestClient url principal password%n");
             return;
         }
 

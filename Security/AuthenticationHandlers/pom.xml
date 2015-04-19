@@ -20,6 +20,7 @@
                 <version>2.3</version>
                 <executions>
                     <execution>
+                        <id>testclient</id>
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
@@ -32,6 +33,23 @@
                             </transformers>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <outputFile>target/testclient.jar</outputFile>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>remote-authentication-handler</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.pushtechnology.blog.security.AliceAuthenticationHandler</mainClass>
+                                </transformer>
+                            </transformers>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <outputFile>target/control-authentication-handler.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>
