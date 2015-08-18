@@ -1,0 +1,84 @@
+<html ng-app='todoApp'>
+	<head>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css'>
+		<link rel='stylesheet' href='lib/rzslider.min.css'>
+		<link rel='stylesheet' href='styles/stylesheet.css'>
+
+		<title>Group Todos</title>
+	</head>
+
+	<body>
+		<div class='page-header'>
+			<h1>Group Todo List <small>Collaborative todo lists</small></h1>
+		</div>
+
+		<div id='list-container' class='container-fluid' ng-controller='TasksController as instance'>
+			<div id='errorAlert' class='alert alert-danger' ng-if='instance.displayErrorAlert'>
+				<strong>Woops!</strong>  {{instance.errorAlertText}}
+			</div>
+			<div id='successAlert' class='alert alert-success' ng-if='instance.displaySuccessAlert'>
+				<strong>Success!</strong> {{instance.successAlertText}}
+			</div>
+			<div class='panel panel-info'>
+				<div class='panel-heading container-fluid'>
+					<h4 class='col-sm-6 col-xs-12 '>Group Todos <small>Welcome to {{instance.listName}}</small></h4>
+					<input type='text' class='col-sm-4 col-xs-10' placeholder='Add a Task...' ng-model='addText'/>
+					<div class='col-sm-2 col-xs-2'>
+						<button type='button' class='btn btn-default btn-sm' ng-click='instance.onAddButtonClick()'>
+							<span class='glyphicon glyphicon-plus'></span>
+						</button>
+						<button type='button' class='btn btn-default btn-sm' ng-click='instance.openListChangeModal()'>
+							<span class='glyphicon glyphicon-tasks'></span>
+						</button>
+					</div>
+				</div>
+				<div class='panel panel-body'>
+					<ul class='list-group' ng-if='instance.tasks.length !== 0'>
+						<li class='col-xs-12 container list-group-item' ng-repeat='task in instance.tasks'>
+							<input class='col-xs-1' type='checkbox' ng-model='task.done' ng-change='instance.onCheckBoxChange(task)'>
+							<p class='col-sm-6 col-xs-9 done-{{task.done}}' >{{task.text}}</p>
+							<div class='col-xs-1'>
+								<button type='button' class='btn btn-default btn-sm' ng-click='instance.openEditTaskModal(task)'>
+									<span class='glyphicon glyphicon-wrench'></span>
+								</button>
+							</div>
+							<div class='col-xs-1'>
+								<button type='button' class='btn btn-default btn-sm' ng-click='instance.onDeleteButtonClick(task)'>
+									<span class='glyphicon glyphicon-trash'></span>
+								</button>
+							</div>
+							<div class='col-sm-3 col-xs-12'>
+								<div class='progress'>
+									<div class='progress-bar bar'style="width:{{(task.completion | percentFilter:task.done)+'%'}}" aria-valuemin='0' aria-valuemax='100' aria-valuenow='50' role='progressbar'>
+										<span min-width='30px'>{{(task.completion | percentFilter:task.done)+'%'}}</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					
+					<h4 ng-if='instance.tasks.length === 0'>Nothing here!</h4>
+				</div>
+			</div>
+		</div>
+		
+		<script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+		<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+		<script src='lib/rzslider.min.js'></script>
+		<script src='lib/ui-bootstrap-tpls-0.13.2.min.js'></script>
+		<script src='http://developer.reappt.io/clients/js/diffusion.js'></script>
+		<script src='scripts/app.js'></script>
+		<script src='scripts/Controllers/loginModalCtrl.js'></script>
+		<script src='scripts/Controllers/changeListModalCtrl.js'></script>
+		<script src='scripts/Controllers/editTaskModalCtrl.js'></script>
+		<script src='scripts/Controllers/tasksCtrl.js'></script>
+		<script src='scripts/Services/remoteModelService.js'></script>
+		<script src='scripts/Services/modelService.js'></script>
+		<script src='scripts/Services/localModelService.js'></script>
+		<script src='scripts/Services/utilsService.js'></script>
+		<script src='scripts/Filters/percentageFilter.js'></script>
+		<!-- Icons from glyphicons.com -->
+	</body>
+</html>
