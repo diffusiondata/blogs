@@ -89,7 +89,6 @@ public class AliceAuthenticationHandler implements ControlAuthenticationHandler 
 
         System.out.printf(
             "Connected to Diffusion at %s%n" +
-            "Control authentication handler registered%n" +
             "Press any key to exit.%n", url);
 
         System.in.read();
