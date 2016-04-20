@@ -63,7 +63,7 @@ public class AliceAuthenticationHandler implements ControlAuthenticationHandler 
 
         final AuthenticationControl authenticationControl = session.feature(AuthenticationControl.class);
         authenticationControl.setAuthenticationHandler(
-            "my-handler",
+            "after-system-handler",
             allOf(SessionDetails.DetailType.class),
             new AliceAuthenticationHandler());
 
