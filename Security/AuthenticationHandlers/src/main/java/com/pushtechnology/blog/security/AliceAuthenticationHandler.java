@@ -15,6 +15,7 @@
 
 package com.pushtechnology.blog.security;
 
+import static com.pushtechnology.diffusion.client.Diffusion.authenticationResult;
 import static java.util.EnumSet.allOf;
 
 import java.io.IOException;
@@ -25,10 +26,14 @@ import com.pushtechnology.diffusion.client.details.SessionDetails;
 import com.pushtechnology.diffusion.client.features.RegisteredHandler;
 import com.pushtechnology.diffusion.client.features.control.clients.AuthenticationControl;
 import com.pushtechnology.diffusion.client.features.control.clients.AuthenticationControl.ControlAuthenticationHandler;
+import com.pushtechnology.diffusion.client.security.authentication.AuthenticationResult;
 import com.pushtechnology.diffusion.client.session.Session;
 import com.pushtechnology.diffusion.client.types.Credentials;
 
 public class AliceAuthenticationHandler implements ControlAuthenticationHandler {
+
+    private static final AuthenticationResult ROLES =
+        authenticationResult().withRoles("CLIENT");
 
     public void authenticate(
         String principal,
@@ -40,7 +45,7 @@ public class AliceAuthenticationHandler implements ControlAuthenticationHandler 
             new String(credentials.toBytes(), Charset.forName("UTF-8"));
 
         if ("Alice".equals(principal) && "0penup".equals(password)) {
-            callback.allow();
+            callback.allow(ROLES);
         }
         else {
             callback.abstain();

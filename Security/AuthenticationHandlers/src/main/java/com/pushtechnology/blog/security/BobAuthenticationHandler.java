@@ -15,13 +15,19 @@
 
 package com.pushtechnology.blog.security;
 
+import static com.pushtechnology.diffusion.client.Diffusion.authenticationResult;
+
 import java.nio.charset.Charset;
 
 import com.pushtechnology.diffusion.client.details.SessionDetails;
 import com.pushtechnology.diffusion.client.security.authentication.AuthenticationHandler;
+import com.pushtechnology.diffusion.client.security.authentication.AuthenticationResult;
 import com.pushtechnology.diffusion.client.types.Credentials;
 
 public class BobAuthenticationHandler implements AuthenticationHandler {
+
+    private static final AuthenticationResult ROLES =
+        authenticationResult().withRoles("AUTHENTICATION_HANDLER");
 
     public void authenticate(
         String principal,
@@ -33,7 +39,7 @@ public class BobAuthenticationHandler implements AuthenticationHandler {
             new String(credentials.toBytes(), Charset.forName("UTF-8"));
 
         if ("Bob".equals(principal) && "s3cr3t".equals(password)) {
-            callback.allow();
+            callback.allow(ROLES);
         }
         else {
             callback.abstain();
