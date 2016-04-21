@@ -34,5 +34,6 @@
 
     <modules>
         <module>AuthenticationHandlers</module>
+        <module>SystemAuthentication</module>
     </modules>
 </project>
