@@ -27,7 +27,21 @@
 
 (setq diffusion-system-authentication-mode-font-lock-defaults
       (list
-       `(,(regexp-opt '("add" "principal" "allow" "deny" "abstain" "anonymous" "connections" "password" "roles" "set" "verify" "encrypted" ) 'words) . font-lock-keyword-face)
+       `(,(regexp-opt '(
+                        "abstain"
+                        "add"
+                        "allow"
+                        "anonymous"
+                        "assign"
+                        "connections"
+                        "deny"
+                        "encrypted"
+                        "password"
+                        "principal"
+                        "roles"
+                        "set"
+                        "verify"
+                        ) 'words) . font-lock-keyword-face)
        `(,(regexp-opt '("," "[" "]")) . 'diffusion-system-authentication-delimiter-face)
         ))
 
