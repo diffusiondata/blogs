@@ -34,7 +34,6 @@ import com.pushtechnology.diffusion.client.features.control.clients.SystemAuthen
  * principal.
  *
  * @author Philip Aston
- * @since 5.8
  */
 public class ChangePassword {
 
